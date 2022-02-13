@@ -26,10 +26,10 @@
                     <th></th>
                 </tr>
             <?php 
-            include_once "./funct.php";
-            foreach(getUser() as $n=>$value): ?>
+            include_once "./funct.php"; $j=0;
+            foreach(getUser() as $n=>$value):$j++; ?>
                 <tr>
-                    <td><?=$n+1?></td>
+                    <td><?=$n?></td>
                     <td><?=$value['id']?></td>
                     <td><?=$value['ism']?></td>
                     <td><?=$value['fam']?></td>

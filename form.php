@@ -11,11 +11,12 @@
 <body>
     <header>
         <div class="container">
-          <form action="save.php" class="form-control">
+          <form action="save.php" class="form-control" method="POST" enctype="multipart/form-data">
             <?php
+                $data = [];
                 if(isset($_GET['id'])){
-                include_once "db.php";
-                $data =  $jsonarray[$_GET['id']];
+                    include_once "funct.php";
+                    $data = getUserById($id);
                     echo "<h2>Update User</h2>";
                 }else{
                     $data['ism']= "";

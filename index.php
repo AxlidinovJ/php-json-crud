@@ -11,7 +11,7 @@
 <body>
     <pre>
 <?php 
-    include_once "db.php";
+    include_once "./funct.php";
  ?>
  </pre>
     <header>
@@ -25,7 +25,7 @@
                     <th>Rasm</th>
                     <th></th>
                 </tr>
-            <?php foreach($jsonarray as $n=>$value): ?>
+            <?php foreach(getUser() as $n=>$value): ?>
                 <tr>
                     <td><?=$n+1?></td>
                     <td><?=$value['id']?></td>

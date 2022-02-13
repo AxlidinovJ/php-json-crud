@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <?php
+    include_once "db.php";
+    $data =  $jsonarray[$_GET['id']];
+    ?>
     <header>
         <div class="container">
             <table class="table">
@@ -19,19 +22,19 @@
                 </tr>
                 <tr>
                     <th>Id</th>
-                    <td>1</td>
+                    <td><?=$data['id']?></td>
                 </tr>
                 <tr>
                     <th>Ism</th>
-                    <td>Jamshidbek</td>
+                    <td><?=$data['ism']?></td>
                 </tr>
                 <tr>
                     <th>Familiya</th>
-                    <td>Axlidinov</td>
+                    <td><?=$data['fam']?></td>
                 </tr>
                 <tr>
                     <th>Rasm</th>
-                    <td><img src="./img/1.png" width="300px" class="table-bordered"></td>
+                    <td><img src="./img/<?=$data['rasm']?>" width="300px" class="table-bordered"></td>
                 </tr>
             </table>
         </div>

@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <pre>
-<?php 
-    include_once "./funct.php";
- ?>
- </pre>
     <header>
         <div class="container">
             <table class="table table-bordered table-striped">
+                <tr>
+                    <th colspan="6">
+                        <a href="form.php" class="btn btn-primary">Create Users</a>
+                    </th>
+                </tr>
                 <tr>
                     <th>tr</th>
                     <th>id</th>
@@ -25,7 +25,9 @@
                     <th>Rasm</th>
                     <th></th>
                 </tr>
-            <?php foreach(getUser() as $n=>$value): ?>
+            <?php 
+            include_once "./funct.php";
+            foreach(getUser() as $n=>$value): ?>
                 <tr>
                     <td><?=$n+1?></td>
                     <td><?=$value['id']?></td>

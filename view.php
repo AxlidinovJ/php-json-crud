@@ -9,16 +9,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php
-    include_once "db.php";
-    $data =  $jsonarray[$_GET['id']];
-    ?>
     <header>
         <div class="container">
-            <table class="table">
+        <?php
+            include_once "./funct.php";
+            $user =  getUser();
+            if(isset($_GET['id']) and isset($user[$_GET['id']])){
+            $data = $user[$_GET['id']];
+        ?>
+            <table class="table table-striped table-bordered table-hover">
                 <tr>
-                    <a href="" class="btn btn-danger">delete</a>
-                    <a href="" class="btn btn-success">update</a>
+                    <p class="h1"><a href="./">Index</a>/Korish</p>
+                    <a href="delete.php?id=<?=$_GET['id']?>" class="btn btn-danger">delete</a>
+                    <a href="form.php?id=<?=$_GET['id']?>" class="btn btn-success">update</a>
                 </tr>
                 <tr>
                     <th>Id</th>
@@ -39,6 +42,10 @@
             </table>
         </div>
     </header>
+
+    <?php }else{
+        echo "<p class='text-danger h1'>Bundan malumot topilmadi</p>";
+    }?>
 
 <script src="./js/bootstrap.bundle.min.js"></script>
 </body>

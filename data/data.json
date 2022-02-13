@@ -1,44 +1,8 @@
-[
-    {
-        "id": 1,
-        "ism": "Jamshidbek",
-        "fam": "Axlidinov",
-        "rasm": "1.png"
-    },
-    {
-        "id": 2,
-        "ism": "Jahongir",
-        "fam": "Axlidinov",
-        "rasm": "2.jpeg"
-    },
-    {
-        "id": 3,
-        "ism": null,
-        "fam": null,
-        "rasm": null
-    },
-    {
-        "id": 774050,
-        "ism": null,
-        "fam": null,
-        "rasm": null
-    },
-    {
-        "id": 966885,
-        "ism": null,
-        "fam": null,
-        "rasm": null
-    },
-    {
-        "id": 195986,
-        "ism": null,
-        "fam": null,
-        "rasm": null
-    },
-    {
-        "id": 486760,
-        "ism": null,
-        "fam": null,
-        "rasm": null
+{
+    "1": {
+        "id": 470371,
+        "ism": "dmwelkm",
+        "fam": "klmwldem",
+        "rasm": "7. \u0411\u0430\u0431\u043e\u0447\u043a\u0430.jpg"
     }
-]
+}

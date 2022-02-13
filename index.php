@@ -29,7 +29,7 @@
             include_once "./funct.php"; $j=0;
             foreach(getUser() as $n=>$value):$j++; ?>
                 <tr>
-                    <td><?=$n?></td>
+                    <td><?=$j?></td>
                     <td><?=$value['id']?></td>
                     <td><?=$value['ism']?></td>
                     <td><?=$value['fam']?></td>

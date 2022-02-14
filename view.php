@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
         <?php
+            include "./header.php";
             include_once "./funct.php";
             $user =  getUser();
+
             if(isset($_GET['id']) and isset($user[$_GET['id']])){
             $data = $user[$_GET['id']];
         ?>
             <table class="table table-striped table-bordered table-hover">
-                <tr>
+                <tr class="card-header">
                     <p class="h1"><a href="./">Index</a>/Korish</p>
-                    <a href="delete.php?id=<?=$_GET['id']?>" class="btn btn-danger">delete</a>
-                    <a href="form.php?id=<?=$_GET['id']?>" class="btn btn-success">update</a>
+                   <div class="btn2">
+                        <a href="delete.php?id=<?=$_GET['id']?>" class="btn btn-danger">delete</a>
+                        <a href="form.php?id=<?=$_GET['id']?>" class="btn btn-success">update</a>
+                   </div>
                 </tr>
                 <tr>
                     <th>Id</th>
@@ -40,13 +31,14 @@
                     <td><img src="./img/<?=$data['rasm']?>" width="300px" class="table-bordered"></td>
                 </tr>
             </table>
-        </div>
-    </header>
+            
+            <?php }else{
+                include_once "./error.php";
+                exit;
+            }?>
 
-    <?php }else{
-        echo "<p class='text-danger h1'>Bundan malumot topilmadi</p>";
-    }?>
+            <?php
+                include "./footer.php";
+            ?>
 
-<script src="./js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+ 

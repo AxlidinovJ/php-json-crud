@@ -19,6 +19,6 @@ if($_POST['xolat']=="create"){
 
 $d = move_uploaded_file($_FILES['rasm']['tmp_name'],"./img/".$_FILES['rasm']['name']);
 echo $d?"Rasm saqlandi":"saqlashda xatolik";
-// header("location:./");
+header("location:./");
 ?>
 </pre>
